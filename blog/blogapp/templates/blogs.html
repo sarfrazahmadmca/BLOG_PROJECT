@@ -1,0 +1,10 @@
+<div >
+<a href="{%url 'create_blog' %}"> Create A Block</a>
+</div>
+{%for blog in blogs%}
+    {{blog.index}}
+<a href="{{blog.get_absolute_url}}">    {{blog.subject}} </a><br> 
+{{blog.created_at}}
+{%endfor%}
+
+

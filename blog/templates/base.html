@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--<html ng-app="phonecatApp" lang="en">-->
+<html lang="en">
+  <head>
+    <title>{% block title %}lmalp{% endblock title %}</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <meta name="description" content="">
+     <script src="http://code.angularjs.org/1.2.7/angular.min.js"></script>
+    <script src="/static/js/base.js"></script>
+    <meta name="author" content="">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/starter-template.css" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+{%block extra_css%}{%endblock extra_css%}
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="row">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Best Blogs</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+         
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </div><!-- /.navbar -->
+	
+
+    <div class="row" >
+	{%block content%}{%endblock content%}
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/bootstrap.min.js"></script>
+
+{%block extra_js%}{% endblock extra_js%}
+  </body>
+</html>
+
+
+

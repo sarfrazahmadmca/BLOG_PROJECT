@@ -1,0 +1,58 @@
+/*! project specific CSS goes here. */
+
+
+
+h1 {
+    padding: 10px 0;
+}
+
+input{
+    padding: 12px 5px;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+table input[type=text] {
+    width: 150px;
+}
+
+table input.editableInputRow {
+    border:none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    
+}
+
+#search-bar {
+    margin-right: 50px;
+}
+
+.container img {
+    float: right;
+    margin-right: 55px;
+}
+
+.hide {
+    display: none;
+}
+
+.message {
+    padding:8px 35px 8px 14px;
+    margin-bottom:20px;
+    text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color:#fcf8e3;
+    border:1px solid #fbeed5;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+}
+
+.errorMessage {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+}
+
