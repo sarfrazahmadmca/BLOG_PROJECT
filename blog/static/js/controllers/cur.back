@@ -1,0 +1,38 @@
+ "use strict";
+
+ App.controller('CurriculumListCtrl', function ($scope, apiCall, $dialog, $http) {
+
+    var type = {
+        type: 'curriculum'
+    };
+
+     $scope.curricula = apiCall.get(type);
+     
+     $scope.orderProp='code';
+     
+     $scope.open = function(){
+	 $scope.addCurriculumModel = true;
+     };
+     
+     $scope.close = function(){
+	 $scope.addCurriculumModel = false;
+     };
+     
+
+    
+     $scope.e_close = funtion(){
+	 $scope.editCurriculumModel= false;
+     };
+     
+     
+     $scope.e_open = function(s,index){
+	 $scope.editCurriculumModel=true;
+	 $scope.E_curriculumName= s.name;
+	 $scope.E_curriculumCode= s.code;
+	 $scope.E_curriculumCountry= s.country.name;
+	 $scope.E_curriculumState = s.state.name;
+     };
+
+
+
+ });

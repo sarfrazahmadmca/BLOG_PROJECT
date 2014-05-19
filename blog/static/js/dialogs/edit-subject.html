@@ -1,0 +1,13 @@
+		<div class="modal-header">
+          <h1>Edit Subject</h1>
+   </div>
+          <div class="modal-body">
+            <form ng-submit="submitEditSubject()">
+          	<p>Name: <input type="text" ng-model="E_subjectName"/></p>
+          <p>Code: <input type="text" ng-model="E_subjectCode" /></p>
+          <p><input class="btn btn-primary" type="submit" value="Submit"></p>
+          </form>
+        </div>
+    <div class="modal-footer">
+          <button ng-click="close()" class="btn btn-primary" >Close</button>
+  </div>;
