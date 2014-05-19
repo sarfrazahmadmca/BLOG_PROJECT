@@ -1,8 +1,8 @@
 from django.shortcuts import render_to_response
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
 
-from .models import Blog
+from .models import Blog,Tag
 from .forms import CreateBlog,CreateTag
 
 def create_blog(request):
