@@ -7,11 +7,8 @@ from django.conf.urls import patterns, include, url
 urlpatterns = patterns('',
     # Examples:
 
-    url(r'^create/$','blogapp.views.create_blog',name='create_blog'),
-    url(r'^$','blogapp.views.blogs',name='all_blogs'),
-    url(r'^blog/(\d+)/$','blogapp.views.blog_detail',name='particular_blog'),
-    url(r'^create_tag/$','blogapp.views.create_tag',name='create_tag'),
-   
+    url(r'^blogs/',include('blogapp.urls')),
+    url(r'^user/',include('profileapp.urls')),   
     # url(r'^$', 'blog.views.home', name='home'),
     # url(r'^blog/', include('blog.foo.urls')),
 
