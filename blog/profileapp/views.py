@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.views import logout_then_login
 
 from .forms import RegisterrationForm,LoginForm
 
@@ -39,7 +40,7 @@ def login_user(request):
 	        login(request, user)
 		username = request.user.username
 		user = request.user
-		return HttpResponseRedirect('/blogs/blogs/')
+		return HttpResponseRedirect('/blogs/')
 	    else:
 	        msg = 'username or password is not valid'
 		return render_to_response('login.html',{'form':form,'msg':msg},context_instance=RequestContext(request))
@@ -47,3 +48,8 @@ def login_user(request):
 	    return render_to_response('login.html',{'form':form}, context_instance=RequestContext(request))
     else:
         return render_to_response('login.html',{'form':form}, context_instance=RequestContext(request))
+
+
+
+def logout_user(request):
+	return logout_then_login(request,login_url='/user/login/')
