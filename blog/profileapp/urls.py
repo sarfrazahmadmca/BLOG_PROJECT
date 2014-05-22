@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^create/$','profileapp.views.create_user',name='create_user'),
     url(r'^login/$','profileapp.views.login_user',name='login_user'),
     url(r'^logout/$','profileapp.views.logout_user',name='logout_user'),
+    url(r'^change_password/$','profileapp.views.change_password',name='change_password'),
    # url(r'^blog/(\d+)/$','blogapp.views.blog_detail',name='particular_blog'),
    # url(r'^create_tag/$','blogapp.views.create_tag',name='create_tag'),
    
